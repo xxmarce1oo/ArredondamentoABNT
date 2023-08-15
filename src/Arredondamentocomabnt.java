@@ -69,11 +69,11 @@ public class Arredondamentocomabnt {
 
         if (diferencaAnterior.compareTo(diferencaSeguinte) < 0) {
             return multiploInteiroAnterior.multiply(faixaArredondamento);
-        } else if (diferencaAnterior.compareTo(diferencaSeguinte) > 0) {
-            return multiploInteiroSeguinte.multiply(faixaArredondamento);
-        } else {
-            if (multiploInteiroAnterior.remainder(new BigDecimal("2")).equals(BigDecimal.ZERO)) {
+        } else if (multiploInteiroAnterior.remainder(new BigDecimal("2")).equals(BigDecimal.ZERO)) {
                 return multiploInteiroAnterior.multiply(faixaArredondamento);
+        } else {
+                if (diferencaAnterior.compareTo(diferencaSeguinte) > 0) {
+                return multiploInteiroSeguinte.multiply(faixaArredondamento);
             } else {
                 return multiploInteiroSeguinte.multiply(faixaArredondamento);
             }
