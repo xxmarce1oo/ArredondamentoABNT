@@ -56,9 +56,9 @@ public class Arredondamentocomabnt {
     /**
      * Realiza o arredondamento de um número de acordo com a norma ABNT NBR ISO 80000-1:2011.
      *
-     * @param numero              O número a ser arredondado.
-     * @param faixaArredondamento A faixa de arredondamento a ser usada.
-     * @return O número arredondado.
+     * @param numero: O número a ser arredondado.
+     * @param faixaArredondamento: A faixa de arredondamento a ser usada.
+     * @return: O número arredondado.
      */
     public static BigDecimal arredondar(BigDecimal numero, BigDecimal faixaArredondamento) {
         BigDecimal multiploInteiroAnterior = numero.divide(faixaArredondamento, 0, RoundingMode.DOWN);
